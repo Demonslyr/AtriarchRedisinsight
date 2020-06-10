@@ -70,5 +70,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: redisinsights-service
+          serviceName: redisinsight-service
           servicePort: http
