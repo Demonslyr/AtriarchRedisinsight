@@ -1,0 +1,12 @@
+stages:
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./service.yaml
+timeout: 10
+notification:
+  recipients:
+  - recipient: dan@mail.atriarch.systems
+    notifier: c-xc9r9:n-g2gcc
+  condition:
+  - Failed
