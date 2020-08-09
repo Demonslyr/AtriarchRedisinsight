@@ -47,13 +47,9 @@ spec:
         capabilities:
           drop:
           - ALL
-        #privileged: false
-        #readOnlyRootFilesystem: true
         runAsUser: 1000
         runAsGroup: 3000
-        fsGroup: 2000
         runAsNonRoot: true
-        #fsGroupChangePolicy: "OnRootMismatch"
 ---
 apiVersion: v1
 kind: Service
