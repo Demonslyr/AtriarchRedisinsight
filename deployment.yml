@@ -38,17 +38,20 @@ spec:
         ports:
         - containerPort: 8001 #exposed conainer port and protocol
           protocol: TCP
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+            - ALL
       volumes:
       - name: db
         persistentVolumeClaim:
           claimName: redisinsight-data
       securityContext:
-        allowPrivilegeEscalation: false
-        capabilities:
-          drop:
-          - ALL
         runAsUser: 1000
         runAsGroup: 3000
+        fsGroup: 2000
         runAsNonRoot: true
 ---
 apiVersion: v1
