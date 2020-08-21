@@ -72,7 +72,7 @@ metadata:
   name: redisinsights-ingress
   namespace: atriarch-logging # The namespace the app will use  
   annotations:
-    kubernetes.io/ingress.class: traefik
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
   - host: redisinsights.atriarch.systems
